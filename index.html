@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cosmetic Products - Home</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo">
+          <img src="img/logo1.png" alt="AURAVIE Logo" />
+          <span class="brand-name">AURAVIE</span>
+          <div class="cart-icon">Cart (<span id="cart-count">0</span>)</div>
+        </div>
+        <nav class="nav">
+          <ul class="nav-links">
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#products" class="nav-link">Products</a></li>
+            <li><a href="#about" class="nav-link">About Us</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+          <button class="menu-toggle" aria-label="Toggle menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          Welcome to <span class="brand-highlight">AURAVIE</span>
+        </h1>
+        <p class="hero-subtitle">
+          Indulge in luxury skincare crafted from nature’s finest ingredients
+        </p>
+        <a href="#products" class="btn">Shop Now</a>
+      </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section id="products" class="products-section">
+      <h2>Our Products</h2>
+      <div class="product-list">
+        <!-- Exemple de produit -->
+        <div class="product-card">
+          <div class="product-image-container">
+            <img src="img/product1.png" alt="Product 1" class="product-image" />
+            <div class="overlay">
+              <button
+                class="add-to-cart-btn"
+                data-product-id="1"
+                data-product-name="Product Name 1"
+                data-product-price="29.99"
+                data-product-image="img/product1.png"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+          <h3 class="product-name">Product Name 1</h3>
+          <p class="product-price">$29.99</p>
+          <p class="product-description">
+            A short description of the product that highlights its key features.
+          </p>
+        </div>
+        <div class="product-card">
+          <div class="product-image-container">
+            <img src="img/product2.png" alt="Product 2" class="product-image" />
+            <div class="overlay">
+              <button
+                class="add-to-cart-btn"
+                data-product-id="2"
+                data-product-name="Product Name 2"
+                data-product-price="39.99"
+                data-product-image="img/product2.png"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+          <h3 class="product-name">Product Name 2</h3>
+          <p class="product-price">$39.99</p>
+          <p class="product-description">
+            A short description of the product that highlights its key features.
+          </p>
+        </div>
+        <!-- Ajoutez plus de cartes de produits ici -->
+      </div>
+      <div id="cartModal" class="cart-modal">
+        <div class="cart-modal-content">
+          <span class="close-btn">&times;</span>
+          <h2>Your Cart</h2>
+          <div id="cartItemsContainer"></div>
+          <hr class="cart-separator" />
+          <p id="cartTotal">Total: $0.00</p>
+
+          <a id="whatsappOrderBtn" class="checkout-btn" target="_blank"
+            >Order via WhatsApp</a
+          >
+        </div>
+      </div>
+
+      <script src="cart.js"></script>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <div class="about-content">
+        <h2>About Us</h2>
+        <p class="about-highlight">
+          Our mission is to provide high-quality, natural skincare solutions
+        </p>
+        <p>
+          that nourish and enhance your natural beauty. We are committed to
+          using sustainably sourced ingredients and innovative formulas to
+          support your skincare journey with a focus on purity, wellness, and
+          efficacy.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <h2>Contact Us</h2>
+      <p>Have any questions? Feel free to reach out!</p>
+      <div class="contact-content">
+        <form class="contact-form" id="contactForm">
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Your Name"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Your Email"
+            required
+          />
+          <textarea
+            name="message"
+            id="message"
+            placeholder="Your Message"
+            required
+          ></textarea>
+          <button type="button" onclick="sendMessage()">Send Message</button>
+        </form>
+        <div class="contact-info">
+          <p><i class="fas fa-phone-alt"></i> +212 629 422 435</p>
+          <p><i class="fas fa-envelope"></i> ydevs2003@gmail.com</p>
+          <p><i class="fas fa-map-marker-alt"></i> MOROCCO, CASABLANCA</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <p>&copy; YDEVS 2024.</p>
+        <div class="social-icons">
+          <a
+            href="https://www.facebook.com/profile.php?id=61568127247806"
+            aria-label="Facebook"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="https://www.instagram.com/arsoo_yo/" aria-label="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://www.linkedin.com/company/ydevs-web" aria-label="LinkedIn"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
